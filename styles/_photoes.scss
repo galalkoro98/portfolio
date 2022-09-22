@@ -1,20 +1,18 @@
 $carousel-height: 500px;
 $control-size: 50px;
 .sec0{
-  background: #3e3e3e;
-
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
 .carousel {
-  width: 80vw;
-  height: $carousel-height;
+  width: 100vw;
+  height: 100vh;
   border-radius: 3px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  
   
   &:hover .controlsphoto {
     opacity: 1;
@@ -36,8 +34,8 @@ $control-size: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100px;
-      width: 100px;
+      height: 100vh;
+      width: 100vw;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.7);
       opacity: .5;
@@ -51,18 +49,20 @@ $control-size: 50px;
   }
   
     .slides {
-      position: absolute;
+      position: relative;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
       display: flex;
-      width: 100%;
+      width: 100vw;
+      height: 100vh;
       transition: 1s ease-in-out all;
       
       .slide {
-        min-width: 100%;
-        min-height: $carousel-height;
-        height: auto;
+        width: 150vw;
+        height: 100vh;
       }
+
+      
     }
 }
